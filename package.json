@@ -1,0 +1,11 @@
+{
+  "name": "zombie-net",
+  "version": "1.0.0",
+  "description": "Blockchain based (not really) zombie management system",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Arkadiusz Sygulski <arkadiusz@sygulski.pl> (https://sygulski.pl/)",
+  "license": "ISC"
+}
