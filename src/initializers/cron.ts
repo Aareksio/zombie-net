@@ -2,6 +2,8 @@ import { CronJob } from 'cron';
 import { updateItems } from '../scripts/updateItems';
 import { updateExchangeRates } from '../scripts/updateExchangeRates';
 
+// Could be fetched on request and cached, but since there are only two resources and we know when they update, scheduling cron job seems reasonable
+// Consider using real cron if environment allows
 export async function cronInitializer() {
   await updateItems();
   await updateExchangeRates();
