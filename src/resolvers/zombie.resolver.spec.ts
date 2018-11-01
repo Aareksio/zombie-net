@@ -1,7 +1,10 @@
 import 'mocha';
-import { expect } from 'chai';
+import { use, expect } from 'chai';
+import * as chaiAsPromised from 'chai-as-promised';
 
 import { ZombieResolver } from './zombie.resolver';
+
+use(chaiAsPromised);
 
 function createFakeZombieRepository() {
   let currentId = 0;
@@ -103,6 +106,10 @@ describe('ZombieResolver', () => {
       const zombie = await zombieResolver.updateZombie(1, { name: 'Updated zombie' });
       expect(zombie).to.not.be.undefined;
     });
+
+    it('throws on invalid zombie id', async () => {
+      await expect(zombieResolver.updateZombie(42, { name: 'Updated zombie' })).to.eventually.be.rejectedWith('Invalid zombie ID');
+    });
   });
 
   describe('mutation:deleteZombie', () => {
@@ -115,6 +122,10 @@ describe('ZombieResolver', () => {
     it('returns deleted zombie', async () => {
       const zombie = await zombieResolver.deleteZombie(1);
       expect(zombie).to.be.not.undefined;
+    });
+
+    it('throws on invalid zombie id', async () => {
+      await expect(zombieResolver.deleteZombie(42)).to.eventually.be.rejectedWith('Invalid zombie ID');
     });
   });
 
