@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon",
-    "serve": "ts-node ./src/app.ts"
+    "serve": "ts-node ./src/app.ts",
+    "test": "mocha -r ts-node/register src/**/*.spec.ts"
   },
   "author": "Arkadiusz Sygulski <arkadiusz@sygulski.pl> (https://sygulski.pl/)",
   "license": "ISC",
@@ -26,9 +27,16 @@
     "typeorm-typedi-extensions": "^0.2.1"
   },
   "devDependencies": {
+    "@types/chai": "^4.1.7",
+    "@types/chai-as-promised": "^7.1.0",
     "@types/graphql": "^14.0.3",
+    "@types/mocha": "^5.2.5",
     "@types/node": "^10.12.1",
+    "chai": "^4.2.0",
+    "chai-as-promised": "^7.1.1",
+    "mocha": "^5.2.0",
     "nodemon": "^1.18.5",
+    "sinon": "^7.1.1",
     "ts-node": "^7.0.1",
     "typescript": "^3.1.4"
   }
