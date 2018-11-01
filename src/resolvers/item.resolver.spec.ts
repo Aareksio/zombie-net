@@ -13,8 +13,12 @@ function createFakeItemRepository() {
 }
 
 describe('ItemResolver', () => {
-  const itemRepository = createFakeItemRepository();
-  const itemResolver = new ItemResolver(itemRepository as any);
+  let itemResolver;
+
+  beforeEach(() => {
+    const itemRepository = createFakeItemRepository();
+    itemResolver = new ItemResolver(itemRepository as any);
+  });
 
   describe('query:item', async () => {
     it('returns item when item id available', async () => {
