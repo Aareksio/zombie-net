@@ -4,9 +4,14 @@
   "description": "Blockchain based (not really) zombie management system",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon",
-    "serve": "ts-node ./src/app.ts",
+    "build-ts": "tsc",
+    "postinstall": "npm run build-ts",
+    "start": "node dist/server.js",
+    "dev": "ts-node ./src/app.ts",
     "test": "mocha -r ts-node/register src/**/*.spec.ts"
+  },
+  "engines": {
+    "node": "10.6.0"
   },
   "author": "Arkadiusz Sygulski <arkadiusz@sygulski.pl> (https://sygulski.pl/)",
   "license": "ISC",

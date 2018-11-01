@@ -1,16 +1,21 @@
 {
   "compilerOptions": {
     "lib": [
-      "es2017"
+      "es2017",
+      "esnext"
     ],
     "target": "es6",
-    "module": "commonjs",
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "sourceMap": true
+    "sourceMap": true,
+    "outDir": "dist"
   },
+  "include": [
+    "src/**/*"
+  ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "**/*.spec.ts"
   ]
 }
