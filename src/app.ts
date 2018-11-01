@@ -32,7 +32,7 @@ async function initialize() {
 
   const app = new Koa();
 
-  const apolloServer = new ApolloServer({ schema, formatError });
+  const apolloServer = new ApolloServer({ schema, formatError, introspection: true });
   apolloServer.applyMiddleware({ app });
 
   app.listen(process.env.APP_PORT);
