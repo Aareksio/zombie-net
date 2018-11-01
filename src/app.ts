@@ -35,8 +35,8 @@ async function initialize() {
   const apolloServer = new ApolloServer({ schema, formatError, introspection: true });
   apolloServer.applyMiddleware({ app });
 
-  app.listen(process.env.APP_PORT);
-  console.log(`App running on ${process.env.APP_PORT}`);
+  app.listen(process.env.PORT);
+  console.log(`App running on ${process.env.PORT}`);
 }
 
 initialize();
