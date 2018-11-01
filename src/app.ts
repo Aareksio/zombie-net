@@ -7,9 +7,9 @@ import * as TypeGraphQL from 'type-graphql';
 import * as TypeORM from 'typeorm';
 import { ApolloServer } from 'apollo-server-koa';
 import { Container } from 'typedi';
-import { ZombieResolver } from './resolvers/zombieResolver';
-import { ZombieItemResolver } from './resolvers/zombieItemResolver';
-import { ItemResolver } from './resolvers/itemResolver';
+import { ZombieResolver } from './resolvers/zombie.resolver';
+import { ZombieItemResolver } from './resolvers/zombieItem.resolver';
+import { ItemResolver } from './resolvers/item.resolver';
 
 dotenv.config();
 
