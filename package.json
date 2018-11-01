@@ -4,8 +4,32 @@
   "description": "Blockchain based (not really) zombie management system",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon",
+    "serve": "ts-node ./src/app.ts"
   },
   "author": "Arkadiusz Sygulski <arkadiusz@sygulski.pl> (https://sygulski.pl/)",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "apollo-server-koa": "^2.1.0",
+    "cron": "^1.5.0",
+    "dotenv": "^6.1.0",
+    "got": "^9.3.0",
+    "graphql": "^14.0.2",
+    "koa": "^2.6.1",
+    "koa-bodyparser": "^4.2.1",
+    "koa-router": "^7.4.0",
+    "reflect-metadata": "^0.1.12",
+    "sqlite3": "^4.0.3",
+    "type-graphql": "^0.15.0",
+    "typedi": "^0.8.0",
+    "typeorm": "^0.2.8",
+    "typeorm-typedi-extensions": "^0.2.1"
+  },
+  "devDependencies": {
+    "@types/graphql": "^14.0.3",
+    "@types/node": "^10.12.1",
+    "nodemon": "^1.18.5",
+    "ts-node": "^7.0.1",
+    "typescript": "^3.1.4"
+  }
 }
